@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title = 'Angular-Binding-04';
+
+  txt_casella:string="Testo modificato"
+
+  onInputUpdate(e:Event){
+    this.txt_casella=(<HTMLInputElement>e.target).value 
+  }
 }
+
